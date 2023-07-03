@@ -90,6 +90,7 @@ body {
 }
 .defi1 {
   padding-top: 200px;
+  position: relative;
 }
 .defi1 h1 {
   font-family: "font-beyno";
@@ -107,10 +108,16 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.defi1 img {
+#ligne {
   margin-top: 0;
   height: 2px;
-  width: 600px;
+  width: 450px;
+}
+#headlogo {
+  position: absolute;
+  width: 50px;
+  right: 350px;
+  bottom: -15px;
 }
 
 /* design pour la partie enigme */
@@ -118,18 +125,27 @@ body {
 .enigme {
   margin: 100px 200px;
 }
-.enigme h1 {
-  font-family: "wakanda";
+.top-enigma h1 {
+  font-family: "font-beyno";
   color: var(--violet-color);
+  text-decoration: underline;
+}
+.top-enigma p {
+  font-size: 12px;
+}
+.enigme span {
+  font-family: Arial;
 }
 .enigme1 {
   display: flex;
   margin-top: 100px;
-  font-family: "font-cantarell";
   font-size: 12px;
+  align-items: center;
 }
-.transcription {
-  padding: 50px 100px 0 0;
+.transcription h1 {
+  font-family: "wakanda";
+  color: var(--violet-color);
+  font-size: 30px;
 }
 .alphabet span {
   text-transform: uppercase;
@@ -137,11 +153,12 @@ body {
   font-family: "wakanda";
 }
 .savaistu {
-  padding: 100px 100px;
-  background: url(./Assets/img/Pantherenigme2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
+  padding: 0 150px;
+  background: url(./Assets/img/Pantherenigme2.png) no-repeat center center/cover;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 /* design de la partie pour répondre */
 
