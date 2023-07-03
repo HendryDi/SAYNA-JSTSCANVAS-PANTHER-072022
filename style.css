@@ -1,0 +1,1006 @@
+@font-face {
+  font-family: "font-beyno";
+  src: url(./Assets/font/BEYNO.ttf);
+}
+@font-face {
+  font-family: "font-cantarell";
+  src: url(./Assets/font/Cantarell.ttf);
+}
+@font-face {
+  font-family: "font-panthera";
+  src: url(./Assets/font/Panthera.ttf);
+}
+@font-face {
+  font-family: "wakanda";
+  src: url(./Assets/font/wakandaforever.ttf);
+}
+:root {
+  --white-color: #fff;
+  --pink-light: #f2cef2;
+  --gray-light: #9e91b7;
+  --violet-color: #df99f2;
+  --blue-pale: #3d2da6;
+  --blue-color: #07338c;
+  --blue-dark: #021740;
+}
+
+/* design normal pour un écran portable de 1440px */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #020812, #182643);
+  color: #fff;
+  animation: fadeInLeft 1s ease-in-out 0s 1 normal forwards;
+  font-size: 16px;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* design pour l'en-tête de la page */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-top: 15px;
+  width: 90%;
+  background: none;
+}
+
+.nav-item {
+  font-family: "font-beyno", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background: none;
+}
+
+.navbar img {
+  margin-right: 700px;
+  background: none;
+  filter: invert(50%);
+}
+
+.navbar img:hover {
+  filter: hue-rotate(270deg);
+}
+
+.nav-item:hover {
+  color: #df99f2;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-item {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .navbar img {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .nav-item {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .navbar img {
+    margin-right: 5px;
+    width: 100px;
+  }
+}
+
+/* design pour la partie personnage du film */
+
+.wakanda {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.socialmedia {
+  margin-top: 180px;
+  position: fixed;
+}
+
+.socialmedia img {
+  height: 20px;
+  display: block;
+  margin-top: 25px;
+  margin-left: 80px;
+}
+
+.socialmedia img:hover {
+  filter: brightness(200%);
+}
+
+.résumé {
+  margin-top: 150px;
+  margin-left: 150px;
+}
+
+.résumé h1 {
+  font-family: "font-panthera", sans-serif;
+  font-size: 44px;
+  color: var(--gray-light);
+  margin-bottom: 0;
+}
+
+.résumé h2 {
+  font-family: "font-beyno", sans-serif;
+  font-size: 22px;
+  margin-top: 5px;
+  color: var(--gray-light);
+}
+
+.résumé p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 12px;
+}
+
+.résumé a {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.résumé a:hover {
+  text-decoration: underline;
+}
+
+.bp {
+  height: 650px;
+}
+
+@media only screen and (max-width: 768px) {
+  .wakanda {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .socialmedia {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .résumé {
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+  .résumé h1 {
+    font-size: 32px;
+  }
+  .résumé h2 {
+    font-size: 18px;
+  }
+  .résumé p {
+    font-size: 14px;
+  }
+  .résumé a {
+    font-size: 12px;
+  }
+  .bp {
+    height: auto;
+    width: 70%;
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .wakanda {
+    flex-direction: column;
+    align-items: center;
+  }
+  .socialmedia img {
+    margin-top: 5px;
+    margin-left: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .résumé {
+    margin-top: 50px;
+    margin-left: 15px;
+  }
+  .résumé h1 {
+    font-size: 24px;
+  }
+  .résumé h2 {
+    font-size: 16px;
+  }
+  .résumé p {
+    font-size: 10px;
+  }
+  .résumé a {
+    font-size: 10px;
+  }
+  .bp {
+    height: auto;
+    width: 50%;
+  }
+}
+
+/* design pour la barre de personnage */
+
+.personnage {
+  display: flex;
+  height: 300px;
+  background: var(--blue-dark);
+  margin-left: 120px;
+  margin-top: -70px;
+  margin-bottom: 150px;
+}
+
+.killmonger {
+  display: flex;
+}
+
+.killmonger img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.killmonger img:hover {
+  transform: scale(1.2);
+}
+
+.killmonger1 {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  padding: 20px 20px;
+}
+
+.killmonger1 h2 {
+  font-family: "font-beyno", sans-serif;
+  font-size: 16px;
+  color: var(--gray-light);
+}
+
+.killmonger1 p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 10px;
+}
+
+.killmonger1 a {
+  color: var(--white-color);
+  font-family: "font-cantarell";
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.killmonger1 a:hover {
+  text-decoration: underline;
+}
+
+.okoye {
+  display: flex;
+}
+
+.okoye img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.okoye img:hover {
+  transform: scale(1.2);
+}
+
+.okoye1 {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  padding: 20px 20px;
+}
+
+.okoye1 h2 {
+  font-family: "font-beyno", sans-serif;
+  font-size: 16px;
+  color: var(--gray-light);
+}
+
+.okoye1 p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.okoye1 a {
+  color: var(--white-color);
+  font-family: "font-cantarell";
+  font-size: 12px;
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.okoye1 a:hover {
+  text-decoration: underline;
+}
+
+.suri {
+  display: flex;
+}
+
+.suri img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.suri img:hover {
+  transform: scale(1.2);
+}
+
+.suri1 {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  padding: 20px 20px;
+}
+
+.suri1 h2 {
+  font-family: "font-beyno", sans-serif;
+  font-size: 16px;
+  color: var(--gray-light);
+}
+
+.suri1 p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 10px;
+}
+
+.suri1 a {
+  color: var(--white-color);
+  font-family: "font-cantarell";
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.suri1 a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .personnage {
+    flex-direction: column;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .killmonger,
+  .okoye,
+  .suri {
+    margin-bottom: 20px;
+  }
+
+  .killmonger1,
+  .okoye1,
+  .suri1 {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .killmonger img,
+  .okoye img {
+    height: 300px;
+    width: 218px;
+  }
+
+  .killmonger1 h2,
+  .okoye1 h2,
+  .suri1 h2 {
+    font-size: 18px;
+  }
+
+  .killmonger1 p,
+  .okoye1 p,
+  .suri1 p {
+    font-size: 14px;
+  }
+
+  .killmonger1 a,
+  .okoye1 a,
+  .suri1 a {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .personnage {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .killmonger img,
+  .okoye img,
+  .suri img {
+    height: 200px;
+    width: 130px;
+  }
+
+  .killmonger1 h2,
+  .okoye1 h2,
+  .suri1 h2 {
+    font-size: 14px;
+  }
+
+  .killmonger1 p,
+  .okoye1 p,
+  .suri1 p {
+    font-size: 10px;
+  }
+
+  .killmonger1 a,
+  .okoye1 a,
+  .suri1 a {
+    font-size: 8px;
+  }
+}
+
+/* design pour la description de black panther */
+
+#hero {
+  display: flex;
+  margin: 100px 200px;
+}
+
+.description {
+  margin-right: 150px;
+  text-align: justify;
+}
+
+.description h2 {
+  text-transform: capitalize;
+  color: var(--gray-light);
+  font-family: "font-beyno", sans-serif;
+  font-size: 16px;
+}
+
+.description p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    margin: 50px;
+  }
+
+  .description {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .description h2 {
+    font-size: 14px;
+  }
+
+  .description p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #hero {
+    margin: 15px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .description h2 {
+    font-size: 12px;
+  }
+
+  .description p {
+    font-size: 10px;
+  }
+}
+
+/* design pour la carte T'challa */
+
+.tchalla {
+  position: relative;
+  height: 800px;
+  width: 450px;
+}
+
+.tchalla1 {
+  position: absolute;
+  left: 15%;
+}
+
+.tchalla1 img {
+  height: 400px;
+}
+
+.tchalla2 {
+  background-color: var(--white-color);
+  width: 300px;
+  color: #020812;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 350px;
+}
+
+.tchalla2 h2 {
+  text-align: center;
+  font-family: "font-cantarell", sans-serif;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.nom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nom span {
+  background-color: var(--blue-pale);
+  border: 1px solid white;
+  border-radius: 10px;
+  color: var(--white-color);
+  padding: 3px 10px;
+  margin: 0 5px;
+}
+
+.nom p {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 12px;
+}
+
+.propos {
+  font-family: "font-cantarell", sans-serif;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.busteblack {
+  height: 30%;
+  margin: 50px auto;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tchalla {
+    height: auto;
+    width: 100%;
+    padding-left: 50px;
+  }
+  .tchalla1 {
+    margin: 0 auto;
+    margin-left: 50px;
+  }
+  .tchalla2 {
+    margin-left: 45px;
+  }
+  .busteblack {
+    height: 20%;
+    margin: 20px auto;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .tchalla {
+    height: 400px;
+    width: 300px;
+    padding-right: 20px;
+  }
+
+  .tchalla1 {
+    left: 18%;
+  }
+
+  .tchalla1 img {
+    height: 170px;
+    width: 140px;
+  }
+
+  .tchalla2 {
+    width: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 150px;
+  }
+
+  .tchalla2 h2 {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .nom span {
+    padding: 2px 6px;
+    margin: 0 2px;
+  }
+
+  .nom p {
+    font-size: 10px;
+  }
+
+  .propos {
+    font-size: 8px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .busteblack {
+    margin: 20px auto;
+    padding-left: 90px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* design pour le formulaire */
+
+#formulaire {
+  background-image: url(./Assets/img/Pantherhome7.png);
+  background-size: cover;
+  height: 100vh;
+  font-family: "font-cantarell", sans-serif;
+  padding-top: 100px;
+}
+
+.formulaire1 {
+  background: linear-gradient(to bottom, var(--white-color) 20%, #d4d3d533);
+  opacity: 100%;
+  border-radius: 120px;
+  height: 300px;
+  width: 300px;
+  margin: 100px auto;
+  color: #020812;
+  text-align: center;
+  padding: 50px 150px;
+}
+
+.formulaire1 p {
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.formulaire1 h1 {
+  font-size: 38px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group input[type="text"],
+.btn-group input[type="email"] {
+  border-radius: 38px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.btn-group textarea {
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 261px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.btn-group input[type="submit"] {
+  font-size: 10px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 38px;
+  background: #e5c3f7;
+}
+
+.btn-group input[type="submit"]:hover {
+  box-shadow: 0 0 20px #021740;
+}
+
+@media only screen and (max-width: 768px) {
+  #formulaire {
+    padding-top: 50px;
+    background-position: center;
+  }
+
+  .formulaire1 {
+    height: auto;
+    width: 50%;
+    margin: 100px auto;
+    padding: 30px;
+  }
+
+  .formulaire1 h1 {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+
+  .formulaire1 p {
+    font-size: 8px;
+  }
+  .btn-group textarea {
+    width: 350px;
+  }
+  .btn-group input[type="text"],
+  .btn-group input[type="email"],
+  .btn-group input[type="submit"] {
+    font-size: 8px;
+    padding: 5px 10px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #formulaire {
+    padding-top: 30px;
+    background-position: center;
+  }
+
+  .formulaire1 {
+    height: 200px;
+    width: 200px;
+    margin: 150px auto;
+    padding: 20px 30px;
+  }
+
+  .formulaire1 h1 {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+
+  .btn-group input[type="text"],
+  .btn-group input[type="email"] {
+    padding: 6px 12px;
+    margin-top: 3px;
+  }
+
+  .btn-group textarea {
+    padding: 6px 12px;
+    width: 180px;
+    height: 40px;
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+  .btn-group input[type="submit"] {
+    font-size: 6px;
+    margin: 3px auto;
+    padding: 6px 12px;
+  }
+}
+
+/* Design pour le footer */
+
+.footer1 {
+  background: url(./Assets/logo/back_footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 150px;
+}
+
+.saynamarvel {
+  background-image: url(./Assets/logo/footer1.png);
+  background-size: contain;
+  transform: scale(1.5);
+  background-repeat: no-repeat;
+  margin: 120px 100px;
+}
+
+.saynamarvel:hover {
+  transform: scale(1.7);
+}
+
+.saynamarvel1 {
+  max-inline-size: 100%;
+  block-size: auto;
+  position: relative;
+  top: 60px;
+  right: 10px;
+  transform: scale(0.5);
+}
+
+.saynamarvel2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-right: 200px;
+}
+
+.saynamarvel3 {
+  display: flex;
+  font-family: "font-cantarell";
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.pages h2 {
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+
+.pages a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--white-color);
+  margin-top: 10px;
+}
+
+.pages a:hover {
+  text-decoration: underline;
+}
+
+.contactus {
+  margin-left: 150px;
+}
+
+.contactus h2 {
+  margin-left: 20px;
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+
+.contactus a {
+  margin-left: 40px;
+  background: none;
+  text-decoration: none;
+}
+
+.contactus img {
+  width: 30px;
+}
+
+.contactus img:hover {
+  transform: scale(1.2);
+}
+
+.disclamer {
+  margin-top: 100px;
+}
+
+.disclamer ul {
+  display: flex;
+}
+
+.disclamer li {
+  padding-right: 20px;
+  font-family: "font-cantarell";
+  font-size: 12px;
+}
+
+.droits {
+  list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer1 {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    margin-top: 50px;
+  }
+
+  .saynamarvel {
+    margin: 0;
+    transform: none;
+    width: 50%;
+    height: auto;
+  }
+
+  .saynamarvel1 {
+    display: none;
+  }
+
+  .saynamarvel2 {
+    margin-top: 20px;
+    padding-right: 0;
+  }
+
+  .contactus {
+    margin-left: 70px;
+  }
+  .contactus h2 {
+    margin-left: 20px;
+  }
+
+  .disclamer {
+    margin-top: 50px;
+  }
+
+  .disclamer ul {
+    flex-direction: column;
+  }
+
+  .disclamer li {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .droits {
+    list-style: disc;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .footer1 {
+    height: auto;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .saynamarvel {
+    margin: 30px 0;
+  }
+
+  .saynamarvel1 {
+    top: 0;
+    right: 0;
+    transform: scale(0.2);
+  }
+
+  .saynamarvel2 {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .contactus a {
+    padding-left: 15px;
+    margin-left: 20px;
+  }
+
+  .disclamer {
+    margin-top: 30px;
+  }
+
+  .pages {
+    margin-left: 30px;
+  }
+
+  .pages h2 {
+    font-size: 18px;
+  }
+
+  .pages a {
+    margin-top: 5px;
+  }
+
+  .contactus h2 {
+    font-size: 15px;
+  }
+
+  .contactus img {
+    width: 15px;
+  }
+}

@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "font-beyno";
+  src: url(./Assets/font/BEYNO.ttf);
+}
+@font-face {
+  font-family: "font-cantarell";
+  src: url(./Assets/font/Cantarell.ttf);
+}
+@font-face {
+  font-family: "font-panthera";
+  src: url(./Assets/font/Panthera.ttf);
+}
+@font-face {
+  font-family: "wakanda";
+  src: url(./Assets/font/wakandaforever.ttf);
+}
+:root {
+  --white-color: #fff;
+  --pink-light: #f2cef2;
+  --gray-light: #9e91b7;
+  --violet-color: #df99f2;
+  --blue-pale: #3d2da6;
+  --blue-color: #07338c;
+  --blue-dark: #021740;
+}
+
+/* design normal pour un écran portable de 1440px */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #000000, #182643);
+  color: #fff;
+  animation: fadeInLeft 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* design pour l'en-tête de la page */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-top: 15px;
+  width: 90%;
+  background: none;
+}
+.nav-item {
+  font-family: "font-beyno", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background: none;
+}
+.navbar img {
+  margin-right: 700px;
+  background: none;
+  filter: invert(50%);
+}
+
+.navbar img:hover {
+  filter: hue-rotate(270deg);
+}
+
+.nav-item:hover {
+  color: #df99f2;
+  text-decoration: underline;
+}
+
+/* design pour la partie défi */
+.defi {
+  display: flex;
+}
+
+.defi0 img {
+  margin-top: 200px;
+  opacity: 40%;
+  height: 700px;
+  width: 918px;
+}
+.defi1 {
+  padding-top: 200px;
+}
+.defi1 h1 {
+  font-family: "font-beyno";
+  font-size: 48px;
+  color: var(--violet-color);
+}
+.defi1 p {
+  padding: 100px 150px 100px 120px;
+  margin-right: 50px;
+  margin-top: 230px;
+  text-align: justify;
+  font-family: "font-cantarell";
+  font-size: 10px;
+  background: url(./Assets/img/Pantherenigme2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.defi1 img {
+  margin-top: 0;
+  height: 2px;
+  width: 600px;
+}
+
+/* design pour la partie enigme */
+
+.enigme {
+  margin: 100px 200px;
+}
+.enigme h1 {
+  font-family: "wakanda";
+  color: var(--violet-color);
+}
+.enigme1 {
+  display: flex;
+  margin-top: 100px;
+  font-family: "font-cantarell";
+  font-size: 12px;
+}
+.transcription {
+  padding: 50px 100px 0 0;
+}
+.alphabet span {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "wakanda";
+}
+.savaistu {
+  padding: 100px 100px;
+  background: url(./Assets/img/Pantherenigme2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+/* design de la partie pour répondre */
+
+.reponse {
+  margin: 0 200px;
+  font-family: "font-cantarell";
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.reponse input[type="text"] {
+  background-color: transparent;
+  border-radius: 38px;
+  border-color: var(--white-color);
+  padding: 10px 15px;
+  margin: 0 700px 10px 0;
+  color: #fff;
+}
+.reponse input[type="submit"] {
+  border-radius: 38px;
+  border-color: var(--white-color);
+  padding: 10px 15px;
+  margin: 50px 850px 0 150px;
+}
+.btn-group input[type="submit"]:hover {
+  box-shadow: 0 0 20px #f2cef2;
+}
+
+/* Design pour le footer */
+
+.footer1 {
+  background: url(./Assets/logo/back_footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 150px;
+}
+.saynamarvel {
+  background-image: url(./Assets/logo/footer1.png);
+  background-size: contain;
+  transform: scale(1.5);
+  background-repeat: no-repeat;
+  margin: 120px 100px;
+}
+
+.saynamarvel:hover {
+  transform: scale(1.7);
+}
+
+.saynamarvel1 {
+  max-inline-size: 100%;
+  block-size: auto;
+  position: relative;
+  top: 60px;
+  right: 10px;
+  transform: scale(0.5);
+}
+
+.saynamarvel2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-right: 200px;
+}
+.saynamarvel3 {
+  display: flex;
+  font-family: "font-cantarell";
+}
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+.pages a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--white-color);
+  margin-top: 10px;
+}
+.contactus {
+  margin-left: 150px;
+}
+.contactus a {
+  margin-left: 25px;
+  background: none;
+  text-decoration: none;
+}
+.contactus img {
+  width: 30px;
+}
+.contactus img:hover {
+  transform: scale(1.2);
+}
+.disclamer {
+  margin-top: 100px;
+}
+.disclamer ul {
+  display: flex;
+}
+.disclamer li {
+  padding-right: 20px;
+  font-family: "font-cantarell";
+  font-size: 12px;
+}
+.droits {
+  list-style: none;
+}

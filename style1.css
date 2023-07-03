@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "font-beyno";
+  src: url(./Assets/font/BEYNO.ttf);
+}
+@font-face {
+  font-family: "font-cantarell";
+  src: url(./Assets/font/Cantarell.ttf);
+}
+@font-face {
+  font-family: "font-panthera";
+  src: url(./Assets/font/Panthera.ttf);
+}
+@font-face {
+  font-family: "wakanda";
+  src: url(./Assets/font/wakandaforever.ttf);
+}
+:root {
+  --white-color: #fff;
+  --pink-light: #f2cef2;
+  --gray-light: #9e91b7;
+  --violet-color: #df99f2;
+  --blue-pale: #3d2da6;
+  --blue-color: #07338c;
+  --blue-dark: #021740;
+}
+
+/* design normal pour un écran portable de 1440px */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #020812, #182643);
+  color: #fff;
+  animation: fadeInLeft 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* design pour l'en-tête de la page */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-top: 15px;
+  width: 90%;
+  background: none;
+}
+.nav-item {
+  font-family: "font-beyno", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background: none;
+}
+.navbar img {
+  margin-right: 700px;
+  background: none;
+  filter: invert(50%);
+}
+
+.navbar img:hover {
+  filter: hue-rotate(270deg);
+}
+
+.nav-item:hover {
+  color: #df99f2;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-item {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .nav-item {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+/* design pour le grand-titre */
+
+.grand-titre {
+  background: url(./Assets/img/Pantherwakanda1.png) center/cover;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 450px;
+}
+
+.grand-titre h1 {
+  width: 500px;
+  font-family: "font-beyno";
+  font-size: 48px;
+  color: var(--violet-color);
+  margin: 0 100px 0 100px;
+}
+
+.grand-titre h2 {
+  font-family: "wakanda";
+  font-size: 32px;
+  color: var(--violet-color);
+  width: 500px;
+  margin: 0 100px 0 100px;
+}
+
+.grand-titre p {
+  font-family: "font-cantarell";
+  font-size: 12px;
+  width: 300px;
+  margin: 50px 100px 0 100px;
+}
+
+@media (max-width: 768px) {
+  .grand-titre {
+    height: 350px;
+    width: 415px;
+    padding-top: 150px;
+    background-position: cover;
+  }
+  .grand-titre h1,
+  .grand-titre h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 426px) {
+  .grand-titre {
+    height: 250px;
+    padding-top: 100px;
+    background-position: contain;
+  }
+  .grand-titre h1,
+  .grand-titre h2 {
+    font-size: 22px;
+  }
+}
+/* design pour les petits titres */
+
+.petit-titre {
+  background-image: url(./Assets/img/Pantherwakanda2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 100px 150px;
+  text-align: justify;
+}
+.petit-titre h2 {
+  font-family: "font-beyno";
+  font-size: 22px;
+  color: var(--violet-color);
+}
+.petit-titre p {
+  font-family: "font-cantarell";
+  font-size: 12px;
+  padding-right: 100px;
+}
+
+.petit-titre1 p {
+  padding-right: 200px;
+}
+.vid-origine {
+  height: 200px;
+  width: 500px;
+  margin: 100px 20px;
+}
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+.image-force img {
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .petit-titre {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 426px) {
+  .petit-titre {
+    margin: 20px;
+  }
+
+  .petit-titre p {
+    padding-right: 20px;
+  }
+
+  .petit-titre1 p {
+    padding-right: 10px;
+  }
+
+  .vid-origine {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .image-force img {
+    width: 100%;
+  }
+}
+
+/* Design pour le footer */
+
+.footer1 {
+  background: url(./Assets/logo/back_footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 150px;
+}
+.saynamarvel {
+  background-image: url(./Assets/logo/footer1.png);
+  background-size: contain;
+  transform: scale(1.5);
+  background-repeat: no-repeat;
+  margin: 120px 100px;
+}
+
+.saynamarvel:hover {
+  transform: scale(1.7);
+}
+
+.saynamarvel1 {
+  max-inline-size: 100%;
+  block-size: auto;
+  position: relative;
+  top: 60px;
+  right: 10px;
+  transform: scale(0.5);
+}
+
+.saynamarvel2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-right: 200px;
+}
+.saynamarvel3 {
+  display: flex;
+  font-family: "font-cantarell";
+}
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+.pages a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--white-color);
+  margin-top: 10px;
+}
+.contactus {
+  margin-left: 150px;
+}
+.contactus a {
+  margin-left: 25px;
+  background: none;
+  text-decoration: none;
+}
+.contactus img {
+  width: 30px;
+}
+.contactus img:hover {
+  transform: scale(1.2);
+}
+.disclamer {
+  margin-top: 100px;
+}
+.disclamer ul {
+  display: flex;
+}
+.disclamer li {
+  padding-right: 20px;
+  font-family: "font-cantarell";
+  font-size: 12px;
+}
+.droits {
+  list-style: none;
+}
