@@ -177,13 +177,13 @@ body {
   margin: 0 700px 10px 0;
   color: #fff;
 }
-.reponse input[type="submit"] {
+button {
   border-radius: 38px;
   border-color: var(--white-color);
   padding: 10px 15px;
   margin: 50px 850px 0 150px;
 }
-.btn-group input[type="submit"]:hover {
+button:hover {
   box-shadow: 0 0 20px #f2cef2;
 }
 
