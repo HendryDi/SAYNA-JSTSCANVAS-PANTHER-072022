@@ -246,15 +246,15 @@ body {
   margin-bottom: 150px;
 }
 
-.killmonger {
+.personnage {
   display: flex;
 }
 
-.killmonger img {
+.personnage img {
   transition: transform 0.2s ease-in-out;
 }
 
-.killmonger img:hover {
+.personnage img:hover {
   transform: scale(1.2);
 }
 
@@ -266,41 +266,10 @@ body {
   padding: 20px 20px;
 }
 
-.killmonger1 h2 {
+.personnage h2 {
   font-family: "font-beyno", sans-serif;
   font-size: 16px;
   color: var(--gray-light);
-}
-
-.killmonger1 p {
-  font-family: "font-cantarell", sans-serif;
-  font-size: 10px;
-}
-
-.killmonger1 a {
-  color: var(--white-color);
-  font-family: "font-cantarell";
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.killmonger1 a:hover {
-  text-decoration: underline;
-}
-
-.okoye {
-  display: flex;
-}
-
-.okoye img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.okoye img:hover {
-  transform: scale(1.2);
-}
-
-.okoye1 {
   margin-top: 5px;
   margin-left: 20px;
   margin-right: 20px;
@@ -308,43 +277,9 @@ body {
   padding: 20px 20px;
 }
 
-.okoye1 h2 {
-  font-family: "font-beyno", sans-serif;
-  font-size: 16px;
-  color: var(--gray-light);
-}
-
-.okoye1 p {
+.personnage p {
   font-family: "font-cantarell", sans-serif;
   font-size: 10px;
-  margin-bottom: 0;
-}
-
-.okoye1 a {
-  color: var(--white-color);
-  font-family: "font-cantarell";
-  font-size: 12px;
-  margin-top: 0;
-  text-decoration: none;
-}
-
-.okoye1 a:hover {
-  text-decoration: underline;
-}
-
-.suri {
-  display: flex;
-}
-
-.suri img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.suri img:hover {
-  transform: scale(1.2);
-}
-
-.suri1 {
   margin-top: 5px;
   margin-left: 20px;
   margin-right: 20px;
@@ -352,26 +287,38 @@ body {
   padding: 20px 20px;
 }
 
-.suri1 h2 {
-  font-family: "font-beyno", sans-serif;
-  font-size: 16px;
-  color: var(--gray-light);
-}
-
-.suri1 p {
-  font-family: "font-cantarell", sans-serif;
-  font-size: 10px;
-}
-
-.suri1 a {
+.personnage a {
   color: var(--white-color);
   font-family: "font-cantarell";
   font-size: 12px;
   text-decoration: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  padding: 20px 20px;
 }
 
-.suri1 a:hover {
+.personnage a:hover {
   text-decoration: underline;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  position: absolute;
+  top: 22%;
+  right: 5%;
+}
+button img {
+  width: 25px;
+}
+#nextBtn {
+}
+#nextBtn img {
+  filter: brightness(0) invert(1);
 }
 
 @media only screen and (max-width: 768px) {
