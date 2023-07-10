@@ -42,14 +42,14 @@
 
     <!-- la partie pour l'énigme -->
     
-    <div class="enigme" id="enigme">
+    <div class="enigme" id="quiz-container">
+        <div id="question">
         <div class="top-enigma" id="top-enigma">
-        <h1>ENIGME NUMERO <span> 1</span></h1>
+        <h1>ENIGME  <span>1</span></h1>
         <p>Prouve ton talent d'espion et déchiffre cette réplique d'Okoyé écrite en Wakandais,<br>
             apprend par la même occasion la première valeur d'une Dora Milaje !
         </p>
     </div>
-        
         <div class="enigme1" id="enigme1">
         <div class="transcription">
             <h1>“ SI JE SUIS  FIDELE C’EST A CE TRONE
@@ -61,13 +61,14 @@
         </div>
         </div>
     </div>
-
     <!-- la partie pour répondre -->
-    <div class="reponse">
+    <div class="reponse" id="answer1">
         <p>Alors, as tu la réponse ?</p>
-        <input type="text" name="réponse" placeholder="Réponse">
-        <button id="submitBtn">ENVOYER</button>
+        <input type="text" id="reponse" placeholder="Réponse">
+        <button id="submit-btn">ENVOYER</button>
     </div>
+</div>
+    
 
 </main>
 
@@ -114,6 +115,6 @@
 </div>
 </div>
     </footer>
-    
+    <script src="./script2.js"></script>
 </body>
 </html>
