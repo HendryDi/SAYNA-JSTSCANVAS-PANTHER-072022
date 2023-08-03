@@ -1,5 +1,3 @@
-// définir le quiz
-
 const questions = [
   {
     title: "Enigme numéro 1",
@@ -27,3 +25,72 @@ const questions = [
     hint: "Le philosophe Francis Bacon inventa en 1605 un alphabet bilitère, uniquement composé des deux lettres A et B. C'est en quelque sorte l'ancêtre du système binaire des ordinateurs actuels car toute lettre pouvait être construite avec un enchainement  précis  de  ces  deux  lettres,  tandis  que  le  système  binaire informatique utilise 0 et 1.",
   },
 ];
+
+const quizContainer = document.getElementById("quiz-container");
+const title = document.getElementById("title");
+const info = document.getElementById("info");
+const question = document.getElementById("question");
+const answerInput = document.getElementById("answer-input");
+const hint = document.getElementById("hint");
+const submitBtn = document.getElementById("submit-btn");
+const restartBtn = document.getElementById("restart-btn");
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const current = questions[currentQuestion];
+  title.textContent = current.title;
+  info.textContent = current.info;
+  question.textContent = current.question;
+  answerInput.value = "";
+  hint.textContent = current.hint;
+  hint.style.display = "block";
+
+  if (currentQuestion >= questions.length - 2) {
+    question.classList.add("ignore-question-style");
+  } else {
+    question.classList.remove("ignore-question-style");
+  }
+}
+
+function checkAnswer() {
+  const current = questions[currentQuestion];
+  const answer = answerInput.value.trim().toUpperCase();
+  const correctAnswer = current.reponse.trim().toUpperCase();
+  if (answer === correctAnswer) {
+    score++;
+  }
+}
+
+function showNextQuestion() {
+  checkAnswer();
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  quizContainer.innerHTML = `
+    <div class="results">
+      <h2>Résultats</h2>
+      <p>Vous avez obtenu ${score} sur ${questions.length} bonnes réponses.</p>
+      <button id="restart-btn">Recommencer</button>
+    </div>
+  `;
+  const restartBtn = document.getElementById("restart-btn");
+  restartBtn.addEventListener("click", () => {
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+  });
+}
+
+showQuestion();
+
+submitBtn.addEventListener("click", () => {
+  showNextQuestion();
+});
